@@ -1,0 +1,25 @@
+{
+  "name": "api-bke-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosViniciusSantos/api-bke-express.git"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "zod",
+    "mvc"
+  ],
+  "author": "Carlos Vinicius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosViniciusSantos/api-bke-express/issues"
+  },
+  "homepage": "https://github.com/CarlosViniciusSantos/api-bke-express#readme"
+}
