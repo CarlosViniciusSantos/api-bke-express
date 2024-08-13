@@ -1,21 +1,17 @@
 import express from 'express'
+import createController from '../controllers/account/createController.js'
+import listController from '../controllers/account/listController.js'
+import getByIdController from '../controllers/account/getByIdController.js'
+import updateByIdController from '../controllers/account/updateById.js'
+import deleteByIdController from '../controllers/account/deleteById.js'
+
 
 const router = express.Router()
 
-router.post('/', (req, res) =>{
-    res.json({message: "Rota de POST account"})
-})
-router.get('/list', (req, res) =>{
-    res.json({message: "Rota de GET account/list"})
-})
-router.get('/:id', (req, res) =>{
-    res.json({message: "Rota de GET account/:ID"})
-})
-router.put('/:id', (req, res) =>{
-    res.json({message: "Rota de PUT account/:ID"})
-})
-router.delete('/:id', (req, res) =>{
-    res.json({message: "Rota de DELETE account/:ID"})
-})
+router.post('/', createController)
+router.get('/list',listController)
+router.get('/:id',getByIdController)
+router.put('/:id',updateByIdController)
+router.delete('/:id',deleteByIdController)
 
 export default router
