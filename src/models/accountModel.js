@@ -1,26 +1,33 @@
 import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient()
 
-export const listAccounts = async () =>{
+export const listAccounts = async () => {
     const accounts = await prisma.account.findMany()
     return accounts
 }
 
-export const getByIdAccount = async (id) =>{
+export const getByIdAccount = async (id) => {
     const account = await prisma.account.findUnique({
-        where:{
+        where: {
             id
         }
     })
     return account
 }
 
-export const deleteByIdAccount = async (id) =>{
+export const deleteByIdAccount = async (id) => {
     const account = await prisma.account.delete({
-        where:{
+        where: {
             id
         }
     })
     return account
+}
+
+export const create = async (account) => {
+    const result = await prisma.account.create({
+        data: account
+    })
+    return result
 }
 
