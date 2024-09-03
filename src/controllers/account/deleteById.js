@@ -1,8 +1,8 @@
-import { deleteByIdAccount } from "../../models/accountModel.js"
+import { deleteAccount } from "../../models/accountModel.js"
 
-const del = async (req, res) =>{
+const remove = async (req, res) =>{
     const {id} = req.params
-    const account = await deleteByIdAccount(+id)
+    const account = await deleteAccount(+id)
 
     if (!account)
         return res.status(404).json({
@@ -15,4 +15,4 @@ const del = async (req, res) =>{
     })
 }
 
-export default del
+export default remove
